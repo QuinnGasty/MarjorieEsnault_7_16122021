@@ -1,0 +1,309 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&family=Lato:wght@100;400;700&family=Roboto:wght@100;400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+#title {
+    text-align: center;
+    margin-top: 42px;
+}
+
+h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 36px;
+    color: #D04F4F;
+}
+
+form {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 17px;
+    background-color: #E7E7E7;
+}
+
+#search {
+    width: 100%;
+    height: 69px;
+    outline: none;
+    border: none;
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    padding: 22px;
+    position: relative;
+    border-radius: 5px;
+    color: #000;
+    opacity: 0.25;
+}
+
+.fa-search {
+    position: absolute;
+    font-size: 32px;
+    margin-top: 17.5px;
+    right: 119.43px;
+}
+
+.list-of-tags {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 100px;
+}
+
+.tags-placeholder {
+    margin-top: 17px;
+    margin-right: 20px;
+    height: 37px;
+    display: flex;
+    /*width: min-content;*/
+    color: #ffffff;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 37px;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.ing-bg-color {
+    background-color: #3282F7;
+}
+
+.unit-bg-color {
+    background-color: #68D9A4;
+}
+
+.ust-bg-color {
+    background-color: #ED6454;
+}
+
+.fa-times-circle {
+    line-height: 37px;
+    margin-left: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.search-btns {
+    margin-left: 100px;
+    margin-top: 17px;
+    display: flex;
+}
+
+.input-btn {
+    width: 170px;
+    height: 69px;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    text-align: left;
+    padding-left: 15px;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.clicked-btn {
+    width: 667px;
+}
+
+.clicked-btn::placeholder {
+    opacity: 0.5;
+}
+
+.input-btn::placeholder {
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+}
+
+.ingr-btn {
+    background-color: #3282F7;
+    outline: #3282F7;
+}
+
+.ingr-tags {
+  background-color: #3282F7;
+  position: absolute;
+}
+
+.unit-btn {
+    background-color: #68D9A4;
+    outline: #68D9A4;
+    margin-left: 20px;
+}
+
+.units-tags {
+    background-color: #68D9A4;
+    margin-left: 20px;
+    position: absolute;
+}
+
+.ustensil-btn {
+    background-color: #ED6454;
+    outline: #ED6454;
+    margin-left: 20px;
+}
+
+.ustensils-tags {
+    background-color: #ED6454;
+    margin-left: 20px;
+    position: absolute;
+}
+
+.fa-chevron-down {
+    position: absolute;
+    color:#ffffff;
+    margin-top: 29px;
+    margin-left: -29px;
+    cursor: pointer;
+}
+
+.fa-chevron-up {
+    display: none;
+    position: absolute;
+    color:#ffffff;
+    margin-top: 29px;
+    margin-left: -29px;
+    cursor: pointer;
+}
+
+.ingr-tags, .units-tags, .ustensils-tags {
+    display: none;
+    margin-top: -3px;
+    border-radius: 0px 0px 5px 5px;
+    position: absolute;
+}
+
+.tags-drop-ing, .tags-drop-units, .tags-drop-ustensils {
+    width: 667px;
+    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    color: #ffffff;
+    padding-left: 19px;
+    padding-top: 10px;
+    padding-bottom: 16px;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    max-height: 397px;
+    overflow: scroll;
+}
+
+.tag-elt {
+    cursor: pointer;
+}
+
+.tag-ust:hover, .tag-unit:hover, .tag-ing:hover {
+    text-decoration: underline;
+}
+
+#result {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+}
+
+.recipe-card {
+    width: 380px;
+    height: 364px;
+    background-color: #E7E7E7;
+    font-family: 'Lato', sans-serif;
+    border-radius: 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.recipe-card img {
+    height: 178px;
+    background-color: #C7BEBE;
+    border-radius: 5px 5px 0px 0px;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 400;
+    height: 22px;
+}
+
+.card-title {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+b {
+    height: min-content;
+}
+
+small {
+    overflow: hidden;
+    font-size: 12px;
+}
+
+.card-time {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.card-info {
+    margin-top: 20px;
+    margin-left: 20px;
+    display: flex;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.ing-list {
+    width: 171px;
+    height: 109px;
+    display: flex;
+    flex-direction: column;
+    white-space: wrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card-quant {
+    margin-left: 3px;
+}
+
+.card-recipe {
+    width: 171px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    height: 109px;
+}
+
+#no-result-msg {
+    margin-left: 100px;
+    margin-top: 17px;
+    margin-right: 100px;
+    height: 70px;
+    background-color: #F0BCC0;
+    border-radius: 5px;
+    border: 1px solid #EF8890;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: #D04F4F;
+    text-align: center;
+    line-height: 70px;
+    display: none;
+}
