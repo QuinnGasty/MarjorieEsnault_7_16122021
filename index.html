@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Les Petits Plats</title>
+  </head>
+
+  <body>
+    <div id="title">
+      <img class="logo" src="./assets/logo.svg" alt="Logo Les Petits Plats" />
+      <h1>Les petits plats</h1>
+    </div>
+
+    <div class="app">
+      <form action="">
+        <label for="search"></label>
+        <input
+          type="search"
+          id="search"
+          placeholder="Rechercher un ingrédient, appareil, ustensiles ou une recette"
+          autocomplete="off"
+        />
+        <i class="fas fa-search"></i>
+      </form>
+
+    <div class="list-of-tags">
+      <!-- <div class="tags-placeholder ing-bg-color"><span>Banane</span> <i class="far fa-times-circle"></i></div>
+      <div class="tags-placeholder unit-bg-color"><span>Blender</span> <i class="far fa-times-circle"></i></div>
+      <div class="tags-placeholder ust-bg-color"><span>Couteau</span> <i class="far fa-times-circle"></i></div> -->
+    </div>
+
+      <ul class="search-btns">
+
+        <li id="ingredients">
+        <input class="input-btn ingr-btn" placeholder="Ingrédients"></input
+        ><i class="fas fa-chevron-down" id="chevron-down-ingr"></i><i class="fas fa-chevron-up" id="chevron-up-ingr"></i>
+        <div class="ingr-tags">
+          <ul class="tags-drop-ing">
+
+          </ul>
+        </div>
+        </li>
+
+        <li id="units">
+        <input class="input-btn unit-btn" placeholder="Appareil"></input
+        ><i class="fas fa-chevron-down" id="chevron-down-unit"></i><i class="fas fa-chevron-up" id="chevron-up-unit"></i>
+        <div class="units-tags">
+          <ul class="tags-drop-units">
+
+          </ul>
+        </div>
+        </li>
+
+        <li id="ustensils">
+        <input class="input-btn ustensil-btn" placeholder="Ustensiles"></input
+        ><i class="fas fa-chevron-down" id="chevron-down-ust"></i><i class="fas fa-chevron-up" id="chevron-up-ust"></i>
+        <div class="ustensils-tags">
+          <ul class="tags-drop-ustensils">
+
+          </ul>
+        </div>
+        </li>
+
+      </ul>
+
+      <div id="no-result-msg">Aucune recette ne correspond à votre critère... Vous pouvez chercher "tarte aux pommes", "poisson" etc...</div>
+
+      <ul id="result">
+      </ul>
+    </div>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
