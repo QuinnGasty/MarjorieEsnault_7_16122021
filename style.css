@@ -200,6 +200,13 @@ form {
     cursor: pointer;
 }
 
+.tag-elt-disable {
+    cursor: default;
+    text-decoration: line-through;
+    color: grey;
+    pointer-events: none;
+}
+
 .tag-ust:hover, .tag-unit:hover, .tag-ing:hover {
     text-decoration: underline;
 }
@@ -306,4 +313,8 @@ small {
     text-align: center;
     line-height: 70px;
     display: none;
+}
+
+.close-tag {
+    display: inline-block;
 }
