@@ -5,6 +5,7 @@ export const listofUnits = (mealsList) => {
         unitList.push(meal.appliance);
 
         unitList = [...new Set(unitList)]
+        unitList.sort()
     })
 
     return unitList

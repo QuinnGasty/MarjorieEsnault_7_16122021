@@ -1,3 +1,5 @@
+// Création tableau d'ustensiles
+
 export const listofUstensils = (mealsList) => {
     let ustensilsList = [];
 
@@ -7,11 +9,13 @@ export const listofUstensils = (mealsList) => {
         ustensils.map(ust => ustensilsList.push(ust))
 
         ustensilsList = Array.from(new Set(ustensilsList))
-
+        ustensilsList.sort()
     })
 
     return ustensilsList;
 }
+
+// Affichage ustensiles
 
 export const ustensilsDisplay = (ustList) => {
     const tagsUst = document.querySelector(".tags-drop-ustensils");

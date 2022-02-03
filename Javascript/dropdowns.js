@@ -12,6 +12,8 @@ const chevUpUnit = document.getElementById("chevron-up-unit");
 const chevDownUst = document.getElementById("chevron-down-ust");
 const chevUpUst = document.getElementById("chevron-up-ust");
 
+// Ouverture - Fermeture des dropdowns
+
 export const dropdownZone = () => {
     chevDownIngr.addEventListener("click", () => {
         inputIngr.classList.add('clicked-btn');

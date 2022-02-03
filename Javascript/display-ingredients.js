@@ -1,3 +1,5 @@
+// Création tableau d'ingrédients
+
 export const listOfIngredients = (mealsList) => {
     let ingredientslist = [];
 
@@ -6,14 +8,14 @@ export const listOfIngredients = (mealsList) => {
 
         ingredients.map(ing => ingredientslist.push(ing.ingredient));
 
-        //console.log(ingredientslist)
-
        ingredientslist = Array.from(new Set(ingredientslist)) 
-       
+       ingredientslist.sort()
 })
 
     return ingredientslist;
 }
+
+// Affichage ingrédients
 
 export const ingDisplay = (ingList) => {
     const tagsIngr = document.querySelector(".tags-drop-ing");

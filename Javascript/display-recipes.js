@@ -1,4 +1,4 @@
-// console.log(recipes);
+// Récupération et affichage des recettes
 
 const result = document.getElementById("result");
 

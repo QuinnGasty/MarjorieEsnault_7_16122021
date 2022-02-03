@@ -13,6 +13,8 @@ export const fillArrayofTags = (arrayOfTags) => {
     })
 }
 
+// Supression tableau de tags
+
 const pullArrayofTags = (arrayOfTags) => {
     const closeTag = document.querySelectorAll(".close-tag");
     const tagElt = document.querySelectorAll(".tag-elt-disable");
@@ -21,7 +23,6 @@ const pullArrayofTags = (arrayOfTags) => {
         closedElt.addEventListener('click', () => {
             tagElt.forEach(elt => {
                 if (elt.textContent === closedElt.previousSibling.textContent) {
-                    //console.log(elt.classList)     
                     elt.classList.add("tag-elt");
                     elt.classList.remove("tag-elt-disable");   
                 }
