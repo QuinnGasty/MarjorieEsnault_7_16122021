@@ -6,6 +6,7 @@ import { listofUnits, unitDisplay } from "./JavaScript/display-units.js";
 import { ustensilsDisplay, listofUstensils } from "./JavaScript/display-ustensils.js";
 import { mainSearch } from "./JavaScript/main-search.js";
 import { fillArrayofTags } from "./JavaScript/display-tags.js";
+import { mainSearchV2 } from "./Javascript/main-search-v2.js";
 
 let listOfTags = [];
 
@@ -20,4 +21,5 @@ ingDisplay(ingList);
 unitDisplay(unitList);
 ustensilsDisplay(ustList);
 mainSearch(recipes);
+mainSearchV2(recipes)
 fillArrayofTags(listOfTags);
