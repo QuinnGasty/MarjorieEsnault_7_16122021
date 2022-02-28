@@ -1,16 +1,36 @@
+import { mainSearch } from "./main-search.js";
+import { recipes } from "./recipes.js";
+
 // Remplissage tableau de tags
 
 export const fillArrayofTags = (arrayOfTags) => {
     const tagsElt = document.querySelectorAll(".tag-elt");
     tagsElt.forEach(tagElt => {
         tagElt.addEventListener('click', (e) => {
+            mainSearch(recipes, tagElt.textContent)
             const currentTag = {title: e.currentTarget.textContent, bg: e.currentTarget.dataset.bg}
             arrayOfTags.push(currentTag);
             e.currentTarget.classList.remove("tag-elt");
             e.currentTarget.classList.add("tag-elt-disable");
-            tagDisplay(arrayOfTags)
+            tagDisplay(arrayOfTags);
         })  
     })
+}
+
+export const disabledTag = (arrayOfTags) => {
+    console.log(arrayOfTags)
+    const tagsElt = document.querySelectorAll(".tag-elt");
+    //tagsElt.forEach(tagElt => {
+        arrayOfTags.forEach(tag => {
+            console.log(tag)
+            /*console.log("from tagArray :" + tag.title, "ingredientsArray: " + tagElt.textContent)
+            if (tag.title == tagElt.textContent) {
+                console.log("Hello")
+                tagElt.classList.remove("tag-elt");
+                tagElt.classList.add("tag-elt-disable");
+            }*/
+        })
+    //})
 }
 
 // Supression tableau de tags

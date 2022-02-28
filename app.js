@@ -22,3 +22,4 @@ ustensilsDisplay(ustList);
 mainSearch(recipes);
 fillArrayofTags(listOfTags);
 
+export const tagsList = () => listOfTags;
