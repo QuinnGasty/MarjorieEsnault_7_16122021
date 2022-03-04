@@ -1,3 +1,4 @@
+import { listOfTags } from "../app.js";
 import { mainSearch } from "./main-search.js";
 import { recipes } from "./recipes.js";
 
@@ -7,9 +8,9 @@ export const fillArrayofTags = (arrayOfTags) => {
     const tagsElt = document.querySelectorAll(".tag-elt");
     tagsElt.forEach(tagElt => {
         tagElt.addEventListener('click', (e) => {
-            mainSearch(recipes, tagElt.textContent)
             const currentTag = {title: e.currentTarget.textContent, bg: e.currentTarget.dataset.bg}
             arrayOfTags.push(currentTag);
+            mainSearch(recipes, listOfTags);
             e.currentTarget.classList.remove("tag-elt");
             e.currentTarget.classList.add("tag-elt-disable");
             tagDisplay(arrayOfTags);

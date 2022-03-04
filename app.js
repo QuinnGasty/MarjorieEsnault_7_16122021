@@ -7,7 +7,7 @@ import { ustensilsDisplay, listofUstensils } from "./JavaScript/display-ustensil
 import { mainSearch } from "./JavaScript/main-search.js";
 import { fillArrayofTags } from "./JavaScript/display-tags.js";
 
-let listOfTags = [];
+export const listOfTags = [];
 
 mealsDisplay(recipes);
 dropdownZone();
@@ -22,4 +22,3 @@ ustensilsDisplay(ustList);
 mainSearch(recipes);
 fillArrayofTags(listOfTags);
 
-export const tagsList = () => listOfTags;

@@ -1,7 +1,7 @@
 import { mealsDisplay } from "./display-recipes.js";
 import { ingDisplay, listOfIngredients } from "./display-ingredients.js";
-import { disabledTag } from "./display-tags.js";
-import { tagsList } from "../app.js";
+import { disabledTag, fillArrayofTags } from "./display-tags.js";
+import { listOfTags } from "../app.js";
 
 const searchInput = document.getElementById("search");
 const recipesDisplay = document.getElementById("result");
@@ -9,15 +9,17 @@ const errorMessage = document.getElementById("no-result-msg");
 
 let newRecipesArray = [];
 
-export const mainSearch = (listOfRecipes, tagValue = "") => {
-    if (tagValue !== "") {
-        //console.log(tagValue)
-        const searchValue = tagValue.toLowerCase();
-        globalSearch(listOfRecipes, searchValue);
-        let newIngredientsList = listOfIngredients(newRecipesArray);
-        //ingDisplay(newIngredientsList);
-        let newArray = tagsList()
-        disabledTag(newArray);
+export const mainSearch = (listOfRecipes, tags = []) => {
+    let newIngredientsList = [];
+
+    if (tags.length > 0) {
+        tags.forEach(tg => {
+            const searchValue = tg.title.toLowerCase();
+            globalSearch(listOfRecipes, searchValue);
+            newIngredientsList = listOfIngredients(newRecipesArray);    
+        })
+        ingDisplay(newIngredientsList);
+        fillArrayofTags(listOfTags);
     } else {
         searchInput.addEventListener('keyup', (key) => {
         const searchValue = key.target.value.toLowerCase();
