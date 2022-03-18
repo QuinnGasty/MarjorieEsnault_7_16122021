@@ -9,6 +9,8 @@ import { fillArrayofTags } from "./JavaScript/display-tags.js";
 
 export const listOfTags = [];
 
+export const init = ()=>{
+
 mealsDisplay(recipes);
 dropdownZone();
 
@@ -21,4 +23,8 @@ unitDisplay(unitList);
 ustensilsDisplay(ustList);
 mainSearch(recipes);
 fillArrayofTags(listOfTags);
+
+}
+
+init();
 
